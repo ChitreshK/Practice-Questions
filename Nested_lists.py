@@ -10,10 +10,10 @@ if __name__ == '__main__':
         name = input()
         score = float(input())
         
-        Result.append([[name,score]])
-        scorelist.append([score])
+        Result.append([name,score])
+        scorelist.append(score)
         
     target=sorted(list(set(scorelist)))[1] 
     for name,score in sorted(Result):
         if score == target:
-            print(score)
+            print(name)
