@@ -1,13 +1,23 @@
 #code
 def primeFactor(N):
-    nums = [2,3,5,7]
-    primeF = []
+#     nums = [2,3,5,7]
+#     primeF = []
             
-    while N > 1:
-       for i in range(len(nums)):
-           if N % nums[i] == 0:
-               primeF.append(nums[i])
-               N = N//nums[i]
+#     while N > 1:
+#        for i in range(len(nums)):
+#            if N % nums[i] == 0:
+#                primeF.append(nums[i])
+#                N = N//nums[i]
+#     return len(primeF)
+
+    primeF = []
+    c = 2
+    while(N > 1):
+        if(N % c == 0):
+            primeF.append(c)
+            N = N / c
+        else:
+            c = c + 1
     return len(primeF)
 
 def HCF(X, Y):
